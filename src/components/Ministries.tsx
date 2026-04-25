@@ -43,13 +43,12 @@ export default function Ministries() {
                 BBC Kids
               </p>
               <h3 className="mt-4 display-serif text-4xl leading-tight sm:text-5xl">
-                Safe, warm, Bible-centered care for children.
+                Safe, warm, Bible-centered program for children.
               </h3>
               <p className="mt-5 text-lg leading-8 text-white/76">
                 Kids enjoy Sunday School at 10:00 AM and Junior Church at 11:00
                 AM. Junior Church usually includes a Bible lesson, craft, snack,
-                and prayer time. Children begin upstairs with the adults for
-                singing, then are dismissed to class downstairs.
+                and prayer time.
               </p>
               <div className="mt-8 grid gap-3 text-sm text-white/78 sm:grid-cols-2">
                 <p className="border border-white/12 p-4">Secure check-in</p>
