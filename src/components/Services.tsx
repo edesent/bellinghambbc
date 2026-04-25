@@ -42,7 +42,7 @@ export default function Services() {
           <p className="text-sm leading-7 text-text-light">{site.serviceTimesNote}</p>
           <Link
             href="/live"
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3 text-sm font-extrabold uppercase tracking-[0.12em] !text-white"
           >
             Watch Live
             <Icon name="play" className="size-4" />
