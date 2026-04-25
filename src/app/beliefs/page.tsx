@@ -21,8 +21,8 @@ export default function BeliefsPage() {
         description="The convictions that shape our preaching, worship, discipleship, and church life."
       />
       <main className="section-pad bg-white-soft">
-        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
-          <div className="grid gap-5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid max-w-5xl gap-5">
             {beliefSections.map((section) => (
               <article key={section.title} className="rounded-lg border border-slate-soft bg-white p-7">
                 <p className="eyebrow">Doctrine</p>
