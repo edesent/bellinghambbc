@@ -115,7 +115,7 @@ export const ministryCards = [
   {
     title: "Nursery",
     description:
-      "A downstairs nursery with responsible staffing, secure check-in, and background-checked workers.",
+      "A nursery with responsible staffing, secure check-in, and background-checked workers.",
     icon: "heart",
   },
   {
