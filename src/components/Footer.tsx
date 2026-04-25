@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-12 border-t border-white/12 pt-8 text-center display-serif text-2xl italic text-gold-light">
+        <p className="mt-12 border-t border-white/12 pt-8 text-center display-serif text-lg italic text-gold-light">
           &ldquo;{site.verse.text}&rdquo; <span className="text-white/54">{site.verse.reference}</span>
         </p>
       </div>
