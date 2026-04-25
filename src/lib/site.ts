@@ -82,7 +82,6 @@ export const serviceTimes = [
 ] as const;
 
 export const navGroups = [
-  { label: "Jesus", href: "/jesus-church-bellingham-massachusetts" },
   { label: "What to Expect", href: "/what-to-expect" },
   { label: "Pastor", href: "/our-pastor" },
   { label: "Beliefs", href: "/beliefs" },

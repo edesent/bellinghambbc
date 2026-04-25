@@ -21,8 +21,8 @@ export default function JesusPage() {
         description="He is more than a man. He died for you, rose again, and can save you now."
       />
       <main className="section-pad bg-white">
-        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
-          <div className="grid gap-5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid max-w-5xl gap-5">
             {jesusSections.map((section) => (
               <article key={section.title} className="rounded-lg border border-slate-soft bg-white-soft p-8">
                 <h2 className="display-serif text-4xl text-ink">{section.title}</h2>
