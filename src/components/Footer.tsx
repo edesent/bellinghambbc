@@ -7,16 +7,16 @@ export default function Footer() {
   return (
     <footer className="bg-ink py-16 text-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
+        <div className="grid gap-10 text-center lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr] lg:text-left">
           <div>
             <Image
               src="/bbbc/logo-white.png"
               alt={site.name}
               width={685}
               height={160}
-              className="h-auto w-full max-w-[330px]"
+              className="mx-auto h-auto w-full max-w-[330px] lg:mx-0"
             />
-            <p className="mt-5 max-w-md text-white/70">
+            <p className="mt-5 max-w-md text-white/70 lg:mx-0 mx-auto">
               {site.address.street}, {site.address.city}, {site.address.region}{" "}
               {site.address.postalCode}
             </p>
