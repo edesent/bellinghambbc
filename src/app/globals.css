@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --color-ink: #142033;
+  --color-ink-soft: #21324d;
+  --color-burgundy: #8f1d2c;
+  --color-burgundy-dark: #661520;
+  --color-gold: #d9aa4f;
+  --color-gold-light: #f3d992;
+  --color-cream: #fff8ea;
+  --color-parchment: #f2eadb;
+  --color-slate-soft: #e7edf3;
+  --color-sky: #5c91bd;
+  --color-sage: #5d7d61;
+  --color-white-soft: #fffdf8;
+  --color-text-body: #283446;
+  --color-text-light: #5f6876;
+  --color-text-muted: #87909b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-body);
+  background: #fffdf8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.section-pad {
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+}
+
+.eyebrow {
+  color: var(--color-burgundy);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.display-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0;
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: var(--color-gold);
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.72s ease forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: rgba(217, 170, 79, 0.32);
+  color: var(--color-ink);
+}
