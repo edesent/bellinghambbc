@@ -25,7 +25,7 @@ export default function PastorPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div className="relative overflow-hidden rounded-lg border border-slate-soft bg-parchment">
             <Image
-              src="/bbbc/pastor-2.jpg"
+              src="/bbbc/Pastor-2.jpg"
               alt="Pastor and family"
               width={838}
               height={560}
