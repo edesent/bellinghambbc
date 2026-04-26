@@ -56,7 +56,7 @@ export default function Welcome() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/our-pastor"
-              className="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-ink-soft"
+              className="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] !text-white transition hover:bg-ink-soft"
             >
               Meet {site.pastor}
             </Link>
