@@ -1,18 +1,42 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { Icon } from "@/components/Icons";
 import { serviceTimes, site } from "@/lib/site";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) {
+      return;
+    }
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    void video.play().catch(() => {
+      // Mobile browsers may still block autoplay in low-power or data-saver modes.
+    });
+  }, []);
+
   return (
     <section id="home" className="relative min-h-[92vh] overflow-hidden bg-ink text-white">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        ref={videoRef}
+        className="hero-background-video absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        disablePictureInPicture
+        controls={false}
         aria-hidden="true"
       >
         <source src="/bbbc/background-video.mp4" type="video/mp4" />
