@@ -24,6 +24,13 @@ export const site = {
     postalCode: "02019",
     country: "US",
   },
+  geo: {
+    latitude: 42.0868,
+    longitude: -71.4745,
+    placeName: "Bellingham, Massachusetts",
+    regionCode: "US-MA",
+    county: "Norfolk County",
+  },
   social: {
     website: "https://bellinghambbc.com/",
     facebook:
@@ -46,10 +53,17 @@ export const site = {
 
 export const localKeywords = [
   "Bellingham Bible Baptist Church",
+  "Bellingham Baptist Church",
   "Baptist church Bellingham MA",
   "Independent Baptist church Bellingham",
+  "Bible Baptist church Bellingham MA",
+  "church in Bellingham MA",
   "church near Bellingham Massachusetts",
   "family friendly church Bellingham",
+  "Sunday School Bellingham MA",
+  "Wednesday prayer service Bellingham MA",
+  "kids church Bellingham MA",
+  "livestream church Bellingham MA",
   "Pastor Michael Carrier",
   "Bellingham BBC",
 ];
@@ -78,6 +92,58 @@ export const serviceTimes = [
     time: "Wednesday at 6:30 PM",
     description: "A midweek Bible club for children.",
     icon: "children",
+  },
+] as const;
+
+export const seoPages = [
+  {
+    path: "/",
+    title:
+      "Bellingham Bible Baptist Church | Independent Baptist Church in Bellingham, MA",
+    description: site.description,
+    priority: 1,
+  },
+  {
+    path: "/what-to-expect",
+    title: "What to Expect at Bellingham Bible Baptist Church",
+    description:
+      "Plan your first visit to Bellingham Bible Baptist Church in Bellingham, Massachusetts.",
+    priority: 0.9,
+  },
+  {
+    path: "/our-pastor",
+    title: `Our Pastor | ${site.pastor}`,
+    description:
+      "Learn more about Dr. Michael Carrier, pastor of Bellingham Bible Baptist Church.",
+    priority: 0.8,
+  },
+  {
+    path: "/beliefs",
+    title: "Beliefs | Bellingham Bible Baptist Church",
+    description:
+      "A concise overview of the doctrinal convictions of Bellingham Bible Baptist Church.",
+    priority: 0.75,
+  },
+  {
+    path: "/ministries",
+    title: "Ministries | Bellingham Bible Baptist Church",
+    description:
+      "Connect with ministries at Bellingham Bible Baptist Church, including nursery, BBC Kids, pastoral counseling, livestream, and community outreach.",
+    priority: 0.85,
+  },
+  {
+    path: "/sermons",
+    title: "Sermons | Bellingham Bible Baptist Church",
+    description:
+      "Watch recently streamed sermons and services from Bellingham Bible Baptist Church.",
+    priority: 0.8,
+  },
+  {
+    path: "/give",
+    title: "Give | Bellingham Bible Baptist Church",
+    description:
+      "Support the ongoing gospel ministry of Bellingham Bible Baptist Church.",
+    priority: 0.65,
   },
 ] as const;
 
@@ -305,6 +371,7 @@ export function buildMetadata({
   return {
     title,
     description,
+    keywords: localKeywords,
     alternates: { canonical: path },
     openGraph: {
       title,
