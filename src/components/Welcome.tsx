@@ -39,7 +39,7 @@ export default function Welcome() {
         <div>
           <p className="eyebrow">You are welcome here</p>
           <h2 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
-            Find a church family that helps yours follow Jesus.
+            Find a church family that helps you walk with Jesus.
           </h2>
           <p className="mt-5 text-lg leading-8 text-text-light">
             Bellingham Bible Baptist Church is a family-oriented congregation of
