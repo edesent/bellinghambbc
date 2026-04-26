@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "@/components/Icons";
 import { serviceTimes, site } from "@/lib/site";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [useFallback, setUseFallback] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -21,26 +22,37 @@ export default function Hero() {
     video.playsInline = true;
 
     void video.play().catch(() => {
-      // Mobile browsers may still block autoplay in low-power or data-saver modes.
+      setUseFallback(true);
     });
   }, []);
 
   return (
     <section id="home" className="relative min-h-[92vh] overflow-hidden bg-ink text-white">
-      <video
-        ref={videoRef}
-        className="hero-background-video absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-        controls={false}
-        aria-hidden="true"
-      >
-        <source src="/bbbc/background-video.mp4" type="video/mp4" />
-      </video>
+      {useFallback ? (
+        <Image
+          src="/bbbc/church-front.jpg"
+          alt="Bellingham Bible Baptist Church"
+          fill
+          priority
+          sizes="100vw"
+          className="hero-fallback-image object-cover"
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          className="hero-background-video absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          controls={false}
+          aria-hidden="true"
+        >
+          <source src="/bbbc/background-video.mp4" type="video/mp4" />
+        </video>
+      )}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,32,51,0.42)_0%,rgba(20,32,51,0.2)_48%,rgba(20,32,51,0)_100%)]" />
       <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(0deg,rgba(20,32,51,0.62)_0%,rgba(20,32,51,0)_100%)]" />
 
