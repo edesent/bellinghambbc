@@ -77,6 +77,20 @@ textarea {
   -webkit-box-orient: vertical;
 }
 
+/* Hide mobile video play button overlay */
+.hero-background-video::-webkit-media-controls {
+  display: none !important;
+}
+.hero-background-video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+.hero-background-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+.hero-background-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
