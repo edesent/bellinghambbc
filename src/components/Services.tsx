@@ -10,7 +10,7 @@ export default function Services() {
           <div>
             <p className="eyebrow">Service Times</p>
             <h2 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
-              A weekly rhythm for the whole family.
+              Come be part of what God is doing.
             </h2>
           </div>
           <p className="text-lg leading-8 text-text-light">
