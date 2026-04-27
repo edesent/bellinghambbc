@@ -132,6 +132,13 @@ export const seoPages = [
     priority: 0.85,
   },
   {
+    path: "/events",
+    title: "Events | Bellingham Bible Baptist Church",
+    description:
+      "View upcoming services, activities, and church events at Bellingham Bible Baptist Church.",
+    priority: 0.85,
+  },
+  {
     path: "/sermons",
     title: "Sermons | Bellingham Bible Baptist Church",
     description:
@@ -152,6 +159,7 @@ export const navGroups = [
   { label: "Pastor", href: "/our-pastor" },
   { label: "Beliefs", href: "/beliefs" },
   { label: "Kids", href: "/ministries#kids" },
+  { label: "Events", href: "/events" },
   { label: "Sermons", href: "/sermons" },
   { label: "Give", href: "/give" },
 ] as const;
