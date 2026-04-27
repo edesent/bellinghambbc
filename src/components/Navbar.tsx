@@ -99,16 +99,25 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button
-          onClick={() => setMenuOpen((open) => !open)}
-          className="focus-ring rounded-lg border border-white/18 p-3 xl:hidden"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-        >
-          <span className="block h-0.5 w-6 bg-white" />
-          <span className="mt-1.5 block h-0.5 w-6 bg-white" />
-          <span className="mt-1.5 block h-0.5 w-6 bg-white" />
-        </button>
+        <div className="ml-auto flex items-center gap-2 xl:hidden">
+          <Link
+            href="/events"
+            className="focus-ring rounded-lg border border-white/24 bg-white/10 px-4 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-white/18"
+            style={{ color: "white" }}
+          >
+            Events
+          </Link>
+          <button
+            onClick={() => setMenuOpen((open) => !open)}
+            className="focus-ring rounded-lg border border-white/18 p-3"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+          >
+            <span className="block h-0.5 w-6 bg-white" />
+            <span className="mt-1.5 block h-0.5 w-6 bg-white" />
+            <span className="mt-1.5 block h-0.5 w-6 bg-white" />
+          </button>
+        </div>
 
         <div
           className={`fixed top-[72px] right-4 left-4 border border-white/12 bg-ink p-4 shadow-2xl transition xl:hidden ${
