@@ -17,7 +17,6 @@ export default function PlanningCenterCalendar() {
     const script = document.createElement("script");
     script.src = "https://bellinghambbc.churchcenter.com/assets/calendar_embed.js";
     script.async = true;
-    script.setAttribute("data-view", "gallery");
     script.setAttribute("data-height", "auto");
 
     container.appendChild(script);
