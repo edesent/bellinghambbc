@@ -11,3 +11,7 @@ current public page structure from `https://bellinghambbc.com/`.
 
 - Public domain: https://bellinghambbc.com/
 - Vercel deployment: https://bellinghambbc.vercel.app/
+
+## Deployment
+
+The site is connected to Vercel and should redeploy after pushes to `main`.
