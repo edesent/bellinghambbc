@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import ChatWidget from "@/components/ChatWidget";
 import { HashScroller } from "@/components/HashScroller";
 import { localKeywords, site, siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body className="min-h-screen antialiased">
         <HashScroller />
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
