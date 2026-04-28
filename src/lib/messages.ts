@@ -11,8 +11,7 @@ export interface MessageItem {
 }
 
 function matchTag(block: string, tag: string) {
-  const closingTag = tag.includes(":") ? tag.split(":")[1] : tag;
-  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${closingTag}>`);
+  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`);
   return block.match(regex)?.[1]?.trim() || "";
 }
 
