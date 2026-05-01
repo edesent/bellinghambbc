@@ -24,11 +24,10 @@ export default function EventsPage() {
       <main className="bg-white">
         <section className="section-pad">
           <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-
             {/* Main Featured Event */}
             <div className="mb-10">
               <Image
-                src="/bbbc/mothers-day-2026.png"
+                src="/bbbc/Mothers%20Day%20Slide.png"
                 alt="Mother's Day at Bellingham Bible Baptist Church"
                 width={1600}
                 height={600}
@@ -38,7 +37,6 @@ export default function EventsPage() {
             </div>
 
             <PlanningCenterCalendar />
-
           </div>
         </section>
       </main>
