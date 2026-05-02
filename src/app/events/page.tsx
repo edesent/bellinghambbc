@@ -33,7 +33,7 @@ export default function EventsPage() {
                 </h2>
               </div>
               <Image
-                src="/bbbc/Mother%20Day%20Final.png"
+                src="/bbbc/MothersDay.Final.png"
                 alt="Mother's Day at Bellingham Bible Baptist Church"
                 width={1600}
                 height={600}
