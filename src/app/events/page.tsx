@@ -26,8 +26,14 @@ export default function EventsPage() {
           <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
             {/* Main Featured Event */}
             <div className="mb-10">
+              <div className="mb-6 text-center">
+                <p className="eyebrow">Featured Event</p>
+                <h2 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
+                  Come and Join Us This Month
+                </h2>
+              </div>
               <Image
-                src="/bbbc/Mothers%20Day%20Slide.png"
+                src="/bbbc/Mother%20Day.Final.png"
                 alt="Mother's Day at Bellingham Bible Baptist Church"
                 width={1600}
                 height={600}
