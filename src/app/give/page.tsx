@@ -4,9 +4,6 @@ import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import { buildMetadata, givingDetails, site } from "@/lib/site";
 
-const churchCenterGivingUrl =
-  "https://bellinghambbc.churchcenter.com/giving?open-in-church-center-modal=true";
-
 export const metadata: Metadata = buildMetadata({
   title: "Give",
   description:
@@ -32,8 +29,19 @@ export default function GivePage() {
                 Give securely through our Church Center platform.
               </p>
               <a
-                href={churchCenterGivingUrl}
-                className="mt-6 inline-flex rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white"
+                href="https://bellinghambbc.churchcenter.com/giving"
+                target="_blank"
+                title="Give Now"
+                style={{
+                  display: "inline-block",
+                  padding: "8px 14px",
+                  background: "#007AB8",
+                  color: "#fff",
+                  border: "1px solid #005078",
+                  borderRadius: "4px",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
               >
                 Give Now
               </a>
