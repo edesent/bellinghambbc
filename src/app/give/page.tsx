@@ -30,7 +30,19 @@ export default function GivePage() {
               </p>
               <a
                 href="https://bellinghambbc.churchcenter.com/giving"
-                data-open-in-church-center-modal="true"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if ((window as any).ChurchCenterModal) {
+                    (window as any).ChurchCenterModal.open({
+                      url: "https://bellinghambbc.churchcenter.com/giving",
+                    });
+                  } else {
+                    window.open(
+                      "https://bellinghambbc.churchcenter.com/giving",
+                      "_blank"
+                    );
+                  }
+                }}
                 className="mt-6 inline-flex rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white"
               >
                 Give Online
