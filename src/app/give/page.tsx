@@ -1,97 +1,55 @@
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import PageHero from "@/components/PageHero";
-import { buildMetadata, givingDetails, site } from "@/lib/site";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = {
   title: "Give",
-  description:
-    "Support the ongoing ministry of Bellingham Bible Baptist Church.",
-  path: "/give",
-});
+  description: "Give to Bellingham Bible Baptist Church",
+};
 
 export default function GivePage() {
   return (
-    <>
-      <Navbar />
-      <PageHero
-        eyebrow="Give"
-        title="Support the ministry"
-        description="Thank you for giving toward the gospel work of Bellingham Bible Baptist Church."
-      />
-      <main className="section-pad bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <div className="overflow-hidden rounded-lg border border-slate-soft bg-white-soft">
-            <div
-              className="flex min-h-[420px] flex-col items-center justify-center px-8 text-center"
-              style={{ position: "relative", zIndex: 1 }}
-            >
-              <h2 className="display-serif text-4xl text-ink">Online giving</h2>
-              <p className="mt-4 max-w-xl text-lg leading-8 text-text-light">
-                Give securely through our Church Center platform.
-              </p>
-              <a
-                href="https://bellinghambbc.churchcenter.com/giving"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Give Now"
-                style={{
-                  display: "inline-block",
-                  marginTop: "24px",
-                  padding: "12px 20px",
-                  background: "#007AB8",
-                  color: "#fff",
-                  border: "1px solid #005078",
-                  borderRadius: "4px",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                  position: "relative",
-                  zIndex: 999,
-                  cursor: "pointer",
-                }}
-              >
-                Give Now
-              </a>
-              <p className="mt-4 text-sm leading-6 text-text-light">
-                If the button does not open, click or copy this direct giving
-                link:{" "}
-                <a
-                  href="https://bellinghambbc.churchcenter.com/giving"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-ink underline underline-offset-4"
-                  style={{ position: "relative", zIndex: 999 }}
-                >
-                  https://bellinghambbc.churchcenter.com/giving
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="space-y-5">
-            <div className="rounded-lg border border-slate-soft bg-white-soft p-8">
-              <h2 className="display-serif text-4xl text-ink">{givingDetails.title}</h2>
-              <p className="mt-4 text-lg leading-8 text-text-light">
-                {givingDetails.description}
-              </p>
-            </div>
-            <div className="rounded-lg border border-gold/35 bg-gold/12 p-8">
-              <h2 className="display-serif text-4xl text-ink">Other ways to give</h2>
-              <p className="mt-4 text-lg leading-8 text-text-light">
-                Gifts can also be made in person during services or by
-                contacting the church.
-              </p>
-              <a
-                href={site.phoneHref}
-                className="mt-5 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-bold text-ink"
-              >
-                Call {site.phoneDisplay}
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <main
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        fontFamily: "sans-serif",
+        textAlign: "center",
+        padding: "20px",
+      }}
+    >
+      <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
+        Give Online
+      </h1>
+
+      <p style={{ marginBottom: "20px" }}>
+        Click below to give securely through Church Center.
+      </p>
+
+      <a
+        href="https://bellinghambbc.churchcenter.com/giving"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          padding: "14px 24px",
+          background: "#007AB8",
+          color: "#ffffff",
+          borderRadius: "6px",
+          textDecoration: "none",
+          fontWeight: "bold",
+          fontSize: "16px",
+        }}
+      >
+        Give Now
+      </a>
+
+      <p style={{ marginTop: "20px", fontSize: "14px" }}>
+        If the button does not work, use this link:
+        <br />
+        https://bellinghambbc.churchcenter.com/giving
+      </p>
+    </main>
   );
 }
