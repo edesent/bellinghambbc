@@ -32,6 +32,8 @@ export default function GivePage() {
               </p>
               <a
                 href={givingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 title="Give Now"
                 style={{
                   display: "inline-block",
@@ -50,6 +52,8 @@ export default function GivePage() {
                 If the button does not open, use this direct giving link:{" "}
                 <a
                   href={givingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-bold text-ink underline underline-offset-4"
                 >
                   bellinghambbc.churchcenter.com/giving
