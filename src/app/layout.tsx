@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Script from "next/script";
 import ChatWidget from "@/components/ChatWidget";
 import { HashScroller } from "@/components/HashScroller";
 import { localKeywords, site, siteUrl } from "@/lib/site";
@@ -62,7 +61,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased">
-        <Script src="https://js.churchcenter.com/modal/v1" strategy="afterInteractive" />
         <HashScroller />
         {children}
         <ChatWidget />
