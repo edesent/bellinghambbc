@@ -23,7 +23,10 @@ export default function GivePage() {
       <main className="section-pad bg-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div className="overflow-hidden rounded-lg border border-slate-soft bg-white-soft">
-            <div className="flex min-h-[420px] flex-col items-center justify-center px-8 text-center">
+            <div
+              className="flex min-h-[420px] flex-col items-center justify-center px-8 text-center"
+              style={{ position: "relative", zIndex: 1 }}
+            >
               <h2 className="display-serif text-4xl text-ink">Online giving</h2>
               <p className="mt-4 max-w-xl text-lg leading-8 text-text-light">
                 Give securely through our Church Center platform.
@@ -33,11 +36,19 @@ export default function GivePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Give Now"
-                className="mt-6 inline-block rounded px-[14px] py-2 font-bold text-white"
                 style={{
+                  display: "inline-block",
+                  marginTop: "24px",
+                  padding: "12px 20px",
                   background: "#007AB8",
+                  color: "#fff",
                   border: "1px solid #005078",
+                  borderRadius: "4px",
                   textDecoration: "none",
+                  fontWeight: "bold",
+                  position: "relative",
+                  zIndex: 999,
+                  cursor: "pointer",
                 }}
               >
                 Give Now
@@ -50,6 +61,7 @@ export default function GivePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-ink underline underline-offset-4"
+                  style={{ position: "relative", zIndex: 999 }}
                 >
                   https://bellinghambbc.churchcenter.com/giving
                 </a>
