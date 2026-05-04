@@ -1,55 +1,67 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import PageHero from "@/components/PageHero";
+import { buildMetadata, givingDetails, site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Give",
-  description: "Give to Bellingham Bible Baptist Church",
-};
+  description:
+    "Support the ongoing ministry of Bellingham Bible Baptist Church.",
+  path: "/give",
+});
+
+const givingModalUrl =
+  "https://bellinghambbc.churchcenter.com/giving?open-in-church-center-modal=true";
 
 export default function GivePage() {
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        fontFamily: "sans-serif",
-        textAlign: "center",
-        padding: "20px",
-      }}
-    >
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
-        Give Online
-      </h1>
-
-      <p style={{ marginBottom: "20px" }}>
-        Click below to give securely through Church Center.
-      </p>
-
-      <a
-        href="https://bellinghambbc.churchcenter.com/giving"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          padding: "14px 24px",
-          background: "#007AB8",
-          color: "#ffffff",
-          borderRadius: "6px",
-          textDecoration: "none",
-          fontWeight: "bold",
-          fontSize: "16px",
-        }}
-      >
-        Give Now
-      </a>
-
-      <p style={{ marginTop: "20px", fontSize: "14px" }}>
-        If the button does not work, use this link:
-        <br />
-        https://bellinghambbc.churchcenter.com/giving
-      </p>
-    </main>
+    <>
+      <Navbar />
+      <PageHero
+        eyebrow="Give"
+        title="Support the ministry"
+        description="Thank you for giving toward the gospel work of Bellingham Bible Baptist Church."
+      />
+      <main className="section-pad bg-white">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+          <div className="flex min-h-[420px] flex-col items-center justify-center rounded-lg border border-slate-soft bg-white-soft px-8 py-16 text-center">
+            <h2 className="display-serif text-4xl text-ink">
+              {givingDetails.title}
+            </h2>
+            <p className="mt-4 max-w-xl text-lg leading-8 text-text-light">
+              {givingDetails.description}
+            </p>
+            <a
+              href={givingModalUrl}
+              className="mt-8 inline-flex rounded-lg bg-ink px-8 py-4 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-ink/90"
+            >
+              Give Now
+            </a>
+            <p className="mt-4 text-sm text-text-light">
+              Opens our secure Church Center giving form.
+            </p>
+          </div>
+          <div className="space-y-5">
+            <div className="rounded-lg border border-gold/35 bg-gold/12 p-8">
+              <h2 className="display-serif text-4xl text-ink">
+                Other ways to give
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-text-light">
+                Gifts can also be made in person during services or by
+                contacting the church.
+              </p>
+              <a
+                href={site.phoneHref}
+                className="mt-5 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-bold text-ink"
+              >
+                Call {site.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
