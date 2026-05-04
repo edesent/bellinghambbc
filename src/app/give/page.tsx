@@ -29,7 +29,8 @@ export default function GivePage() {
             <iframe
               src={givingEmbedUrl}
               title="Online giving"
-              className="h-[760px] w-full"
+              scrolling="no"
+              className="block h-[1500px] w-full"
             />
           </div>
           <div className="space-y-5">
