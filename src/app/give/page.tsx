@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/give",
 });
 
-const givingModalUrl =
+const givingEmbedUrl =
   "https://bellinghambbc.churchcenter.com/giving?open-in-church-center-modal=true";
 
 export default function GivePage() {
@@ -25,24 +25,22 @@ export default function GivePage() {
       />
       <main className="section-pad bg-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <div className="flex min-h-[420px] flex-col items-center justify-center rounded-lg border border-slate-soft bg-white-soft px-8 py-16 text-center">
-            <h2 className="display-serif text-4xl text-ink">
-              {givingDetails.title}
-            </h2>
-            <p className="mt-4 max-w-xl text-lg leading-8 text-text-light">
-              {givingDetails.description}
-            </p>
-            <a
-              href={givingModalUrl}
-              className="mt-8 inline-flex rounded-lg bg-ink px-8 py-4 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-ink/90"
-            >
-              Give Now
-            </a>
-            <p className="mt-4 text-sm text-text-light">
-              Opens our secure Church Center giving form.
-            </p>
+          <div className="overflow-hidden rounded-lg border border-slate-soft bg-white-soft">
+            <iframe
+              src={givingEmbedUrl}
+              title="Online giving"
+              className="h-[760px] w-full"
+            />
           </div>
           <div className="space-y-5">
+            <div className="rounded-lg border border-slate-soft bg-white-soft p-8">
+              <h2 className="display-serif text-4xl text-ink">
+                {givingDetails.title}
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-text-light">
+                {givingDetails.description}
+              </p>
+            </div>
             <div className="rounded-lg border border-gold/35 bg-gold/12 p-8">
               <h2 className="display-serif text-4xl text-ink">
                 Other ways to give
