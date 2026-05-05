@@ -11,8 +11,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/give",
 });
 
-const givingEmbedUrl =
-  "https://bellinghambbc.churchcenter.com/giving?open-in-church-center-modal=true";
+const givingEmbedUrl = "https://bellinghambbc.churchcenter.com/giving";
 
 export default function GivePage() {
   return (
@@ -29,8 +28,8 @@ export default function GivePage() {
             <iframe
               src={givingEmbedUrl}
               title="Online giving"
-              scrolling="no"
-              className="block h-[1500px] w-full"
+              width="100%"
+              className="block h-[2000px] w-full max-w-full md:h-[1500px]"
             />
           </div>
           <div className="space-y-5">
