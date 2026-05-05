@@ -30,7 +30,8 @@ export default function GivePage() {
               src={givingEmbedUrl}
               title="Online giving"
               width="100%"
-              className="block h-[2000px] w-full max-w-full md:h-[1500px]"
+              style={{ width: "1px", minWidth: "100%", maxWidth: "100%" }}
+              className="block h-[2000px] md:h-[1500px]"
             />
           </div>
           <div className="space-y-5">
