@@ -26,13 +26,13 @@ export default function GivePage() {
       <main className="section-pad bg-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div className="overflow-hidden rounded-lg border border-slate-soft bg-white-soft">
-            <iframe
-              src={givingEmbedUrl}
-              title="Online giving"
-              width="100%"
-              style={{ width: "1px", minWidth: "100%", maxWidth: "100%" }}
-              className="block h-[2000px] md:h-[1500px]"
-            />
+            <div className="relative h-[2000px] md:h-[1500px]">
+              <iframe
+                src={givingEmbedUrl}
+                title="Online giving"
+                className="absolute left-0 top-0 block h-[2400px] w-[120%] origin-top-left scale-[0.8333] border-0 md:h-[1500px] md:w-full md:scale-100"
+              />
+            </div>
           </div>
           <div className="space-y-5">
             <div className="rounded-lg border border-slate-soft bg-white-soft p-8">
