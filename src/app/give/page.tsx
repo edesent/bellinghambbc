@@ -11,7 +11,8 @@ export const metadata: Metadata = buildMetadata({
   path: "/give",
 });
 
-const givingEmbedUrl = "https://bellinghambbc.churchcenter.com/giving";
+const givingEmbedUrl =
+  "https://bellinghambbc.churchcenter.com/giving?open-in-church-center-modal=true";
 
 export default function GivePage() {
   return (
