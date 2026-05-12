@@ -230,7 +230,7 @@ export const kidsPhotos = [
   "/bbbc/IMG_1212.jpeg",
   "/bbbc/Congregation.jpeg",
   "/bbbc/IMG_1219.jpeg",
-  "/bbbc/kids-7.jpg",
+  "/bbbc/IMG_1215.jpeg",
   "/bbbc/kids-8.jpg",
 ] as const;
 
