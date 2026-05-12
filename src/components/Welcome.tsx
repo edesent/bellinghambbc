@@ -27,7 +27,7 @@ export default function Welcome() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-slate-soft">
             <Image
-              src="/bbbc/kids-7.jpg"
+              src="/bbbc/IMG_1217.jpeg"
               alt="Church fellowship at BBBC"
               fill
               sizes="(min-width: 1024px) 22vw, 50vw"
