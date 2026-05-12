@@ -24,22 +24,32 @@ export default function EventsPage() {
       <main className="bg-white">
         <section className="section-pad">
           <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-            {/* Main Featured Event */}
+            {/* Main Featured Events */}
             <div className="mb-10">
               <div className="mb-6 text-center">
-                <p className="eyebrow">Featured Event</p>
+                <p className="eyebrow">Featured Events</p>
                 <h2 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
                   Come and Join Us This Month
                 </h2>
               </div>
-              <Image
-                src="/bbbc/MothersDay.Final.png"
-                alt="Mother's Day at Bellingham Bible Baptist Church"
-                width={1600}
-                height={600}
-                className="w-full rounded-lg shadow-lg"
-                priority
-              />
+              <div className="grid gap-6 md:grid-cols-2">
+                <Image
+                  src="/bbbc/Teen night activity.png"
+                  alt="Teen Night activity at Bellingham Bible Baptist Church"
+                  width={900}
+                  height={900}
+                  className="h-full w-full rounded-lg object-cover shadow-lg"
+                  priority
+                />
+                <Image
+                  src="/bbbc/Water Works.png"
+                  alt="Water Works activity at Bellingham Bible Baptist Church"
+                  width={900}
+                  height={900}
+                  className="h-full w-full rounded-lg object-cover shadow-lg"
+                  priority
+                />
+              </div>
             </div>
 
             <PlanningCenterCalendar />
