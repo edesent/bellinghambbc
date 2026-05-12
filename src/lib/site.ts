@@ -226,10 +226,10 @@ export const ministryCards = [
 
 export const kidsPhotos = [
   "/bbbc/IMG_1216.jpeg",
-  "/bbbc/kids-2.jpg",
-  "/bbbc/kids-4.jpg",
+  "/bbbc/IMG_1211.jpeg",
+  "/bbbc/IMG_1212.jpeg",
   "/bbbc/Congregation.jpeg",
-  "/bbbc/kids-6.jpg",
+  "/bbbc/IMG_1219.jpeg",
   "/bbbc/kids-7.jpg",
   "/bbbc/kids-8.jpg",
 ] as const;
