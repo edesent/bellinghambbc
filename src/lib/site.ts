@@ -227,7 +227,6 @@ export const ministryCards = [
 export const kidsPhotos = [
   "/bbbc/IMG_1216.jpeg",
   "/bbbc/kids-2.jpg",
-  "/bbbc/IMG_1216.jpeg",
   "/bbbc/kids-4.jpg",
   "/bbbc/Congregation.jpeg",
   "/bbbc/kids-6.jpg",
