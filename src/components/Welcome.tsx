@@ -9,7 +9,7 @@ export default function Welcome() {
         <div className="grid grid-cols-2 gap-3">
           <div className="relative col-span-2 aspect-[16/10] overflow-hidden rounded-lg border border-slate-soft">
             <Image
-              src="/bbbc/kids-5.jpg"
+              src="/bbbc/Congregation.jpeg"
               alt="Church family at Bellingham Bible Baptist Church"
               fill
               sizes="(min-width: 1024px) 44vw, 100vw"
