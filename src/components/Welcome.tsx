@@ -18,8 +18,8 @@ export default function Welcome() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-slate-soft">
             <Image
-              src="/bbbc/kids-2.jpg"
-              alt="Children's ministry at BBBC"
+              src="/bbbc/IMG_1225.jpeg"
+              alt="Choir ministry at BBBC"
               fill
               sizes="(min-width: 1024px) 22vw, 50vw"
               className="object-cover"
