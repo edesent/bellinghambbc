@@ -1,40 +1,46 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Script from "next/script";
-import ChatWidget from "@/components/ChatWidget";
-import { HashScroller } from "@/components/HashScroller";
-import { localKeywords, site, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL("https://www.bmbcrockwell.com"),
   title: {
     default:
-      "Bellingham Bible Baptist Church | Independent Baptist Church in Bellingham, MA",
-    template: `%s | ${site.name}`,
+      "Bible Missionary Baptist Church | BMBC Rockwell, NC",
+    template: "%s | Bible Missionary Baptist Church",
   },
-  description: site.description,
-  keywords: localKeywords,
-  authors: [{ name: site.name }],
-  creator: site.name,
-  publisher: site.name,
+  description:
+    "Bible Missionary Baptist Church is a King James Bible-believing Baptist church in Rockwell, North Carolina.",
+  keywords: [
+    "Bible Missionary Baptist Church",
+    "BMBC Rockwell",
+    "Baptist church Rockwell NC",
+    "King James Bible church Rockwell",
+    "Pastor Cody Zorn",
+    "church in Rowan County NC",
+  ],
+  authors: [{ name: "Bible Missionary Baptist Church" }],
+  creator: "Bible Missionary Baptist Church",
+  publisher: "Bible Missionary Baptist Church",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: `${site.name} | Bellingham, Massachusetts`,
-    description: site.description,
-    url: siteUrl,
+    title: "Bible Missionary Baptist Church | Rockwell, NC",
+    description:
+      "A King James Bible-believing Baptist church in Rockwell, North Carolina.",
+    url: "https://www.bmbcrockwell.com",
     type: "website",
     locale: "en_US",
-    siteName: site.name,
-    images: [`${siteUrl}/opengraph-image`],
+    siteName: "BMBC",
+    images: ["/bmbc/church-exterior.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | Bellingham, Massachusetts`,
-    description: site.description,
-    images: [`${siteUrl}/twitter-image`],
+    title: "Bible Missionary Baptist Church | Rockwell, NC",
+    description:
+      "A King James Bible-believing Baptist church in Rockwell, North Carolina.",
+    images: ["/bmbc/church-exterior.jpg"],
   },
   robots: {
     index: true,
@@ -48,9 +54,9 @@ export const metadata: Metadata = {
   },
   category: "religion",
   icons: {
-    icon: [{ url: "/bbbc/red-logo.png", type: "image/png" }],
-    shortcut: ["/bbbc/red-logo.png"],
-    apple: ["/bbbc/red-logo.png"],
+    icon: [{ url: "/bmbc/logo.jpg", type: "image/jpeg" }],
+    shortcut: ["/bmbc/logo.jpg"],
+    apple: ["/bmbc/logo.jpg"],
   },
 };
 
@@ -62,13 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased">
-        <HashScroller />
         {children}
-        <ChatWidget />
-        <Script
-          src="https://js.churchcenter.com/modal/v1"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

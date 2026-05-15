@@ -19,6 +19,14 @@
   --color-text-body: #283446;
   --color-text-light: #5f6876;
   --color-text-muted: #87909b;
+  --color-bmbc-ink: #0e1a1f;
+  --color-bmbc-red: #7e1f2a;
+  --color-bmbc-red-dark: #5d151f;
+  --color-bmbc-gold: #c9a653;
+  --color-bmbc-cream: #f7f0e3;
+  --color-bmbc-stone: #d6c8b5;
+  --color-bmbc-teal: #2f6967;
+  --color-bmbc-muted: #5d625e;
 }
 
 html {
@@ -29,7 +37,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text-body);
-  background: #fffdf8;
+  background: var(--color-bmbc-cream);
   -webkit-font-smoothing: antialiased;
 }
 

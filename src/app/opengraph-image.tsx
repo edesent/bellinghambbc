@@ -19,7 +19,7 @@ export default function OpenGraphImage() {
           justifyContent: "space-between",
           padding: "64px",
           background:
-            "linear-gradient(135deg, #142033 0%, #8f1d2c 48%, #d9aa4f 100%)",
+            "linear-gradient(135deg, #0e1a1f 0%, #7e1f2a 48%, #c9a653 100%)",
           color: "white",
         }}
       >
@@ -35,18 +35,26 @@ export default function OpenGraphImage() {
               width: "70px",
               height: "70px",
               borderRadius: "8px",
-              background: "#d9aa4f",
+              border: "4px solid #c9a653",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#c9a653",
+              fontSize: 44,
+              fontWeight: 900,
             }}
-          />
+          >
+            B
+          </div>
           <div
             style={{
               fontSize: 26,
               textTransform: "uppercase",
-              letterSpacing: "0.35em",
-              color: "#f3d992",
+              letterSpacing: "0.18em",
+              color: "#f2d68b",
             }}
           >
-            Bellingham Bible Baptist Church
+            BMBC Rockwell, NC
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
@@ -58,7 +66,7 @@ export default function OpenGraphImage() {
               maxWidth: "900px",
             }}
           >
-            You Are Welcome Here
+            Bible Missionary Baptist Church
           </div>
           <div
             style={{
@@ -68,7 +76,7 @@ export default function OpenGraphImage() {
               color: "rgba(255,255,255,0.82)",
             }}
           >
-            Independent Baptist church in Bellingham, Massachusetts
+            Relevant in the present. Rooted in the past.
           </div>
         </div>
       </div>
