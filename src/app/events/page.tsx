@@ -34,8 +34,8 @@ export default function EventsPage() {
               </div>
               <div className="grid gap-6 md:grid-cols-2">
                 <Image
-                  src="/bbbc/Teen night activity.png"
-                  alt="Teen Night activity at Bellingham Bible Baptist Church"
+                  src="/bbbc/Memorial Day Cookout.png"
+                  alt="Memorial Day Cookout at Bellingham Bible Baptist Church"
                   width={900}
                   height={900}
                   className="h-full w-full rounded-lg object-cover shadow-lg"
