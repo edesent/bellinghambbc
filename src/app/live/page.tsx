@@ -23,7 +23,7 @@ export default function LivePage() {
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
           <div className="aspect-video overflow-hidden rounded-lg bg-ink">
             <iframe
-              src="https://www.youtube.com/embed/live_stream?channel=UCgZhLi5jHOWD3j9dhY24S-g"
+              src="https://www.youtube.com/embed/yj8Sa8NIQYg"
               title="Bellingham Bible Baptist Church livestream"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
