@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
+import { getLiveStatus } from "@/lib/live";
 import { buildMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
@@ -10,7 +11,16 @@ export const metadata: Metadata = buildMetadata({
   path: "/live",
 });
 
-export default function LivePage() {
+export const revalidate = 10;
+
+export default async function LivePage() {
+  const { isLive, videoId } = await getLiveStatus();
+
+  const embedSrc =
+    isLive && videoId
+      ? `https://www.youtube.com/embed/${videoId}?autoplay=1`
+      : `https://www.youtube.com/embed/live_stream?channel=UCgZhLi5jHOWD3j9dhY24S-g`;
+
   return (
     <>
       <Navbar />
@@ -23,7 +33,7 @@ export default function LivePage() {
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
           <div className="aspect-video overflow-hidden rounded-lg bg-ink">
             <iframe
-              src="https://www.youtube.com/embed/yj8Sa8NIQYg"
+              src={embedSrc}
               title="Bellingham Bible Baptist Church livestream"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
