@@ -30,7 +30,10 @@ export async function getLiveStatus(): Promise<LiveStatus> {
     );
     const videoId = canonical?.[1] ?? null;
 
-    const isLive = /"isLive":true/.test(html);
+    const isOffline =
+      /"status":"LIVE_STREAM_OFFLINE"/.test(html) ||
+      /"isUpcoming":true/.test(html);
+    const isLive = !isOffline && /"isLive":true/.test(html);
 
     return { isLive, videoId };
   } catch {
