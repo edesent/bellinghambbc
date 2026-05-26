@@ -56,23 +56,20 @@ export default async function LivePage() {
             description="Grab a Bible and join us online when the livestream begins."
           />
           <main className="section-pad bg-white">
-            <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
-              <div className="aspect-video overflow-hidden rounded-lg bg-ink">
-                <iframe
-                  src="https://www.youtube.com/embed/live_stream?channel=UCgZhLi5jHOWD3j9dhY24S-g"
-                  title="Bellingham Bible Baptist Church livestream"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
-              <div className="mt-8 rounded-lg border border-slate-soft bg-white-soft p-7">
+            <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
+              <div className="rounded-lg border border-slate-soft bg-white-soft p-10 text-center">
                 <h2 className="display-serif text-4xl text-ink">Sunday at 11:00 AM</h2>
                 <p className="mt-4 text-lg leading-8 text-text-light">
-                  We are glad you are here. If the church is not live at this
-                  moment, visit the sermons page for the most recent streamed
-                  messages.
+                  The livestream is not currently active. Join us live on
+                  Sunday at 11:00 AM, or visit the sermons page for the most
+                  recent streamed messages.
                 </p>
+                <a
+                  href="/sermons"
+                  className="mt-6 inline-flex rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white"
+                >
+                  Watch Recent Sermons
+                </a>
               </div>
             </div>
           </main>
