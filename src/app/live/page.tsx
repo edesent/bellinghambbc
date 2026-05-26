@@ -66,7 +66,7 @@ export default async function LivePage() {
                 </p>
                 <a
                   href="/sermons"
-                  className="mt-6 inline-flex rounded-lg bg-ink px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white"
+                  className="mt-6 inline-flex rounded-lg border border-ink bg-white px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink transition hover:bg-ink hover:text-white"
                 >
                   Watch Recent Sermons
                 </a>
