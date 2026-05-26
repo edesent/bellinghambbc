@@ -22,14 +22,15 @@ export default function PastorPage() {
         description="Pastoral leadership rooted in biblical conviction, family discipleship, and gospel outreach in Bellingham."
       />
       <main className="section-pad bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-          <div className="relative aspect-video overflow-hidden rounded-lg border border-slate-soft bg-parchment">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:items-start lg:px-8">
+          <div className="relative overflow-hidden rounded-xl border border-slate-soft bg-parchment shadow-lg">
             <Image
-              src="/bbbc/Pastor-2.jpg"
-              alt="Pastor and family"
-              width={838}
-              height={560}
+              src="/bbbc/IMG_6839.jpeg"
+              alt="Pastor Michael Carrier"
+              width={900}
+              height={1200}
               className="h-full w-full object-cover"
+              priority
             />
           </div>
           <div>
