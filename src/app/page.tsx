@@ -21,7 +21,7 @@ const churchSchema = {
   description: site.description,
   telephone: "+1-508-966-0873",
   email: site.email,
-  image: canonical("/bbbc/red-logo.png"),
+  image: canonical("/bbbc/IMG_1225.jpeg"),
   logo: canonical("/bbbc/red-logo.png"),
   address: {
     "@type": "PostalAddress",
