@@ -42,8 +42,8 @@ export default function EventsPage() {
                   priority
                 />
                 <Image
-                  src="/bbbc/Water Works.png"
-                  alt="Water Works activity at Bellingham Bible Baptist Church"
+                  src="/bbbc/50%2B%20Breakfast%20and%20Ministry.png"
+                  alt="50 Plus Breakfast and Ministry at Bellingham Bible Baptist Church"
                   width={900}
                   height={900}
                   className="h-full w-full rounded-lg object-cover shadow-lg"
