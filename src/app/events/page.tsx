@@ -24,7 +24,6 @@ export default function EventsPage() {
       <main className="bg-white">
         <section className="section-pad">
           <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-            {/* Main Featured Events */}
             <div className="mb-10">
               <div className="mb-6 text-center">
                 <p className="eyebrow">Featured Events</p>
@@ -32,21 +31,13 @@ export default function EventsPage() {
                   Come and Join Us This Month
                 </h2>
               </div>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div>
                 <Image
                   src="/bbbc/Ladies%20Meeting%202026.png"
                   alt="Ladies Meeting 2026 at Bellingham Bible Baptist Church"
-                  width={900}
+                  width={1800}
                   height={900}
-                  className="h-full w-full rounded-lg object-cover shadow-lg"
-                  priority
-                />
-                <Image
-                  src="/bbbc/Ladies%20Meeting%202026.png"
-                  alt="Ladies Meeting 2026 at Bellingham Bible Baptist Church"
-                  width={900}
-                  height={900}
-                  className="h-full w-full rounded-lg object-cover shadow-lg"
+                  className="w-full rounded-lg object-cover shadow-lg"
                   priority
                 />
               </div>
