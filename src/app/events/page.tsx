@@ -34,16 +34,16 @@ export default function EventsPage() {
               </div>
               <div className="grid gap-6 md:grid-cols-2">
                 <Image
-                  src="/bbbc/First%20Steps%20Discipleship.png"
-                  alt="First Steps Discipleship at Bellingham Bible Baptist Church"
+                  src="/bbbc/Ladies%20Meeting%202026.png"
+                  alt="Ladies Meeting 2026 at Bellingham Bible Baptist Church"
                   width={900}
                   height={900}
                   className="h-full w-full rounded-lg object-cover shadow-lg"
                   priority
                 />
                 <Image
-                  src="/bbbc/50%2B%20Breakfast%20and%20Ministry.png"
-                  alt="50 Plus Breakfast and Ministry at Bellingham Bible Baptist Church"
+                  src="/bbbc/Ladies%20Meeting%202026.png"
+                  alt="Ladies Meeting 2026 at Bellingham Bible Baptist Church"
                   width={900}
                   height={900}
                   className="h-full w-full rounded-lg object-cover shadow-lg"
