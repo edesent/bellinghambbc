@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/live",
 });
 
-export const revalidate = 10;
+export const dynamic = "force-dynamic";
 
 export default async function LivePage() {
   const { isLive, videoId } = await getLiveStatus();

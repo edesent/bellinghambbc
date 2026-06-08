@@ -14,6 +14,8 @@ export const metadata: Metadata = buildMetadata({
   path: "/sermons",
 });
 
+export const dynamic = "force-dynamic";
+
 export default async function SermonsPage() {
   const [messages, live] = await Promise.all([
     getMessages(12),
