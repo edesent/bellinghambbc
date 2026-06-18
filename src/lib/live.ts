@@ -1,5 +1,3 @@
-const channelId = "UCgZhLi5jHOWD3j9dhY24S-g";
-
 const browserHeaders = {
   "User-Agent":
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
@@ -18,7 +16,7 @@ async function isVideoLive(videoId: string): Promise<boolean> {
     const response = await fetch(
       `https://www.youtube.com/watch?v=${videoId}`,
       {
-        next: { revalidate: 5 },
+        cache: "no-store",
         headers: browserHeaders,
       },
     );
@@ -30,11 +28,11 @@ async function isVideoLive(videoId: string): Promise<boolean> {
   }
 }
 
-export async function getLiveStatus(): Promise<LiveStatus> {
+export async function getLiveStatus(channelId: string): Promise<LiveStatus> {
   try {
     const rssResp = await fetch(
       `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`,
-      { next: { revalidate: 30 } },
+      { cache: "no-store" },
     );
     if (!rssResp.ok) return { isLive: false, videoId: null };
 

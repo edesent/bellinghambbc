@@ -12,9 +12,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const fetchCache = "force-no-store";
 
 export default async function LivePage() {
-  const { isLive, videoId } = await getLiveStatus();
+  const { isLive, videoId } = await getLiveStatus(
+    "UCgZhLi5jHOWD3j9dhY24S-g",
+  );
   const showLiveHero = isLive && videoId;
 
   return (

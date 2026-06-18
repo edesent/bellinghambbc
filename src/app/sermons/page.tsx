@@ -15,11 +15,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const fetchCache = "force-no-store";
 
 export default async function SermonsPage() {
   const [messages, live] = await Promise.all([
     getMessages(12),
-    getLiveStatus(),
+    getLiveStatus("UCgZhLi5jHOWD3j9dhY24S-g"),
   ]);
 
   const showLiveHero = live.isLive && live.videoId;
