@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
-import { kidsPhotos, ministryCards } from "@/lib/site";
+import { kidsPhotos, ministryCards, site } from "@/lib/site";
+
+const facebookReels = [
+  { id: "27898958696376860", title: "Kids Club reel" },
+  { id: "1373115571546067", title: "Kids Club reel" },
+  { id: "1674596123768909", title: "Kids Club reel" },
+];
 
 export default function Ministries() {
   return (
@@ -72,6 +78,42 @@ export default function Ministries() {
                     fill
                     sizes="(min-width: 1024px) 28vw, 50vw"
                     className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div id="kids-club-reels" className="mt-16 rounded-3xl border border-ink/10 bg-white p-8 shadow-xl">
+          <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Kids Club Reels</p>
+              <h3 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
+                Watch BBC Kids moments from our Facebook page.
+              </h3>
+              <p className="mt-5 text-lg leading-8 text-text-light">
+                These short videos show what families and children experience at Kid&apos;s Club and BBC Kids ministry events.
+              </p>
+              <a
+                href={site.social.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex rounded-lg bg-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink"
+              >
+                View more on Facebook
+              </a>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {facebookReels.map((reel) => (
+                <div key={reel.id} className="overflow-hidden rounded-3xl border border-ink/10 bg-ink text-white shadow-lg">
+                  <iframe
+                    src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.id}&show_text=false&width=560`}
+                    title={reel.title}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="aspect-[9/16] h-full w-full"
+                    style={{ minHeight: 380, border: 0 }}
                   />
                 </div>
               ))}
