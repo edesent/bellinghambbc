@@ -16,7 +16,7 @@ async function isVideoLive(videoId: string): Promise<boolean> {
     const response = await fetch(
       `https://www.youtube.com/watch?v=${videoId}`,
       {
-        cache: "no-store",
+        next: { revalidate: 30 },
         headers: browserHeaders,
       },
     );
@@ -32,7 +32,7 @@ export async function getLiveStatus(channelId: string): Promise<LiveStatus> {
   try {
     const rssResp = await fetch(
       `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`,
-      { cache: "no-store" },
+      { next: { revalidate: 30 } },
     );
     if (!rssResp.ok) return { isLive: false, videoId: null };
 
