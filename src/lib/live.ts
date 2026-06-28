@@ -1,11 +1,13 @@
-const channelId = "UCgZhLi5jHOWD3j9dhY24S-g";
+const defaultChannelId = "UCgZhLi5jHOWD3j9dhY24S-g";
 
 export interface LiveStatus {
   isLive: boolean;
   videoId: string | null;
 }
 
-export async function getLiveStatus(): Promise<LiveStatus> {
+export async function getLiveStatus(
+  channelId = defaultChannelId,
+): Promise<LiveStatus> {
   try {
     const response = await fetch(
       `https://www.youtube.com/channel/${channelId}/live`,
