@@ -33,7 +33,7 @@ export default function EventsPage() {
               </div>
               <div>
                 <Image
-                  src="/bbbc/Tom A Faulk.png"
+                  src="/bbbc/Tom%20A%20Faulk.png"
                   alt="Tom A Faulk featured event at Bellingham Bible Baptist Church"
                   width={1200}
                   height={630}
