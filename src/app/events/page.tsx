@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
@@ -26,19 +25,16 @@ export default function EventsPage() {
           <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
             <div className="mb-10">
               <div className="mb-6 text-center">
-                <p className="eyebrow">Featured Events</p>
+                <p className="eyebrow">Featured Event</p>
                 <h2 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
                   Come and Join Us This Month
                 </h2>
               </div>
               <div>
-                <Image
-                  src="/bbbc/Tom%20A%20Faulk.png?v=20260628"
+                <img
+                  src="/bbbc/Tom%20A%20Faulk.png"
                   alt="Tom A Faulk featured event at Bellingham Bible Baptist Church"
-                  width={1800}
-                  height={900}
                   className="w-full rounded-lg object-cover shadow-lg"
-                  priority
                 />
               </div>
             </div>
