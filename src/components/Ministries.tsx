@@ -4,9 +4,21 @@ import { Icon } from "@/components/Icons";
 import { kidsPhotos, ministryCards, site } from "@/lib/site";
 
 const facebookReels = [
-  { id: "27898958696376860", title: "Kids Club reel" },
-  { id: "1373115571546067", title: "Kids Club reel" },
-  { id: "1674596123768909", title: "Kids Club reel" },
+  {
+    id: "27898958696376860",
+    title: "Kids Club reel",
+    fallbackText: "Watch the latest Kids Club moments on Facebook.",
+  },
+  {
+    id: "1373115571546067",
+    title: "Kids Club reel",
+    fallbackText: "See more children’s ministry highlights on Facebook.",
+  },
+  {
+    id: "1674596123768909",
+    title: "Kids Club reel",
+    fallbackText: "Open this reel directly on Facebook for the full experience.",
+  },
 ];
 
 export default function Ministries() {
@@ -107,14 +119,27 @@ export default function Ministries() {
             <div className="grid gap-4 sm:grid-cols-2">
               {facebookReels.map((reel) => (
                 <div key={reel.id} className="overflow-hidden rounded-3xl border border-ink/10 bg-ink text-white shadow-lg">
-                  <iframe
-                    src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.id}&show_text=false&width=560`}
-                    title={reel.title}
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="aspect-[9/16] h-full w-full"
-                    style={{ minHeight: 380, border: 0 }}
-                  />
+                  <div className="flex h-full min-h-[380px] flex-col justify-between p-6">
+                    <div>
+                      <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold-light">
+                        Facebook Reel
+                      </p>
+                      <h4 className="mt-3 display-serif text-2xl text-white">
+                        {reel.title}
+                      </h4>
+                      <p className="mt-3 text-sm leading-7 text-white/75">
+                        {reel.fallbackText}
+                      </p>
+                    </div>
+                    <a
+                      href={`https://www.facebook.com/reel/${reel.id}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex w-fit rounded-lg bg-gold px-4 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink"
+                    >
+                      Open reel on Facebook
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
