@@ -32,11 +32,11 @@ export default function EventsPage() {
               </div>
               <div
                 role="img"
-                aria-label="Hope For All Nations Missions Conference featured event at Bellingham Bible Baptist Church"
+                aria-label="Hope For All Nations MC featured event at Bellingham Bible Baptist Church"
                 className="w-full rounded-lg bg-cover bg-center shadow-lg"
                 style={{
                   aspectRatio: "1200 / 630",
-                  backgroundImage: "url('/bbbc/Hope%20For%20All%20Nations%20Missions%20Conference.png')",
+                  backgroundImage: "url('/bbbc/Hope%20For%20All%20Nations%20MC.png')",
                 }}
               />
             </div>
