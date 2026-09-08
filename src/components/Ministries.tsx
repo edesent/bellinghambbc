@@ -5,16 +5,16 @@ import { kidsPhotos, ministryCards, site } from "@/lib/site";
 
 const facebookReels = [
   {
-    title: "Kids Club reel",
+    title: "Kids Club on Facebook",
     fallbackText: "Watch the latest Kids Club moments on Facebook.",
   },
   {
-    title: "Kids Club reel",
+    title: "Kids Club on Facebook",
     fallbackText: "See more children’s ministry highlights on Facebook.",
   },
   {
-    title: "Kids Club reel",
-    fallbackText: "Open this reel directly on Facebook for the full experience.",
+    title: "Kids Club on Facebook",
+    fallbackText: "Visit our church page for the full experience.",
   },
 ];
 
