@@ -30,15 +30,6 @@ export default function EventsPage() {
                   Come and Join Us This Month
                 </h2>
               </div>
-              <div
-                role="img"
-                aria-label="Hope For All Nations MC featured event at Bellingham Bible Baptist Church"
-                className="w-full rounded-lg bg-cover bg-center shadow-lg"
-                style={{
-                  aspectRatio: "1200 / 630",
-                  backgroundImage: "url('/bbbc/Hope%20For%20All%20Nations%20MC.png')",
-                }}
-              />
               <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-ink/10 bg-cream px-5 py-4 sm:flex-row sm:items-center sm:px-6">
                 <div>
                   <p className="eyebrow">September 26, 2026 | 11:00 AM-3:00 PM</p>
@@ -58,6 +49,15 @@ export default function EventsPage() {
                   View event flyer
                 </a>
               </div>
+              <div
+                role="img"
+                aria-label="Hope For All Nations MC featured event at Bellingham Bible Baptist Church"
+                className="mt-6 w-full rounded-lg bg-cover bg-center shadow-lg"
+                style={{
+                  aspectRatio: "1200 / 630",
+                  backgroundImage: "url('/bbbc/Hope%20For%20All%20Nations%20MC.png')",
+                }}
+              />
             </div>
 
             <PlanningCenterCalendar />
