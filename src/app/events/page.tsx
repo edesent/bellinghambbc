@@ -39,6 +39,25 @@ export default function EventsPage() {
                   backgroundImage: "url('/bbbc/Hope%20For%20All%20Nations%20MC.png')",
                 }}
               />
+              <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-ink/10 bg-cream px-5 py-4 sm:flex-row sm:items-center sm:px-6">
+                <div>
+                  <p className="eyebrow">Coming this fall</p>
+                  <h3 className="mt-2 display-serif text-2xl text-ink sm:text-3xl">
+                    Harvest Fest 2026
+                  </h3>
+                  <p className="mt-1 text-sm text-text-light">
+                    View the event flyer for details and the rain date.
+                  </p>
+                </div>
+                <a
+                  href="/bbbc/Harvest_Fest_2026_with_Rain_Date.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex shrink-0 items-center rounded-full bg-burgundy px-5 py-3 text-sm font-bold text-white transition hover:bg-burgundy-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                >
+                  View event flyer
+                </a>
+              </div>
             </div>
 
             <PlanningCenterCalendar />
