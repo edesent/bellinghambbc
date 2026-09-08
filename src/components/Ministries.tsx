@@ -5,17 +5,14 @@ import { kidsPhotos, ministryCards, site } from "@/lib/site";
 
 const facebookReels = [
   {
-    id: "27898958696376860",
     title: "Kids Club reel",
     fallbackText: "Watch the latest Kids Club moments on Facebook.",
   },
   {
-    id: "1373115571546067",
     title: "Kids Club reel",
     fallbackText: "See more children’s ministry highlights on Facebook.",
   },
   {
-    id: "1674596123768909",
     title: "Kids Club reel",
     fallbackText: "Open this reel directly on Facebook for the full experience.",
   },
@@ -132,12 +129,12 @@ export default function Ministries() {
                       </p>
                     </div>
                     <a
-                      href={`https://www.facebook.com/reel/${reel.id}`}
+                      href={site.social.facebook}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-6 inline-flex w-fit rounded-lg bg-gold px-4 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink"
                     >
-                      Open reel on Facebook
+                      Visit Facebook page
                     </a>
                   </div>
                 </div>
