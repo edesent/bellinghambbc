@@ -1,22 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
-import { kidsPhotos, ministryCards, site } from "@/lib/site";
-
-const facebookReels = [
-  {
-    title: "Kids Club on Facebook",
-    fallbackText: "Watch the latest Kids Club moments on Facebook.",
-  },
-  {
-    title: "Kids Club on Facebook",
-    fallbackText: "See more children’s ministry highlights on Facebook.",
-  },
-  {
-    title: "Kids Club on Facebook",
-    fallbackText: "Visit our church page for the full experience.",
-  },
-];
+import { kidsPhotos, ministryCards } from "@/lib/site";
 
 export default function Ministries() {
   return (
@@ -94,54 +79,6 @@ export default function Ministries() {
           </div>
         </div>
 
-        <div id="kids-club-reels" className="mt-16 rounded-3xl border border-ink/10 bg-white p-8 shadow-xl">
-          <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
-            <div>
-              <p className="eyebrow">Kids Club Reels</p>
-              <h3 className="mt-4 display-serif text-4xl leading-tight text-ink sm:text-5xl">
-                Watch BBC Kids moments from our Facebook page.
-              </h3>
-              <p className="mt-5 text-lg leading-8 text-text-light">
-                These short videos show what families and children experience at Kid&apos;s Club and BBC Kids ministry events.
-              </p>
-              <a
-                href={site.social.facebook}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex rounded-lg bg-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink"
-              >
-                View more on Facebook
-              </a>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {facebookReels.map((reel) => (
-                <div key={reel.id} className="overflow-hidden rounded-3xl border border-ink/10 bg-ink text-white shadow-lg">
-                  <div className="flex h-full min-h-[380px] flex-col justify-between p-6">
-                    <div>
-                      <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold-light">
-                        Facebook Reel
-                      </p>
-                      <h4 className="mt-3 display-serif text-2xl text-white">
-                        {reel.title}
-                      </h4>
-                      <p className="mt-3 text-sm leading-7 text-white/75">
-                        {reel.fallbackText}
-                      </p>
-                    </div>
-                    <a
-                      href={site.social.facebook}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-flex w-fit rounded-lg bg-gold px-4 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-ink"
-                    >
-                      Visit Facebook page
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
