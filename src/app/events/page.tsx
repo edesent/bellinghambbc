@@ -41,7 +41,7 @@ export default function EventsPage() {
               />
               <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-ink/10 bg-cream px-5 py-4 sm:flex-row sm:items-center sm:px-6">
                 <div>
-                  <p className="eyebrow">Coming this fall</p>
+                  <p className="eyebrow">September 26, 2026 | 11:00 AM-3:00 PM</p>
                   <h3 className="mt-2 display-serif text-2xl text-ink sm:text-3xl">
                     Harvest Fest 2026
                   </h3>
